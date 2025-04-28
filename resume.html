@@ -16,42 +16,99 @@
         margin: 0 auto;
         max-width: 800px;
         padding: 20px;
+        text-align: center;
+        background-color: #f9f8f0;
       }
       h1, h2, h3, h4, h5 {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
       }
       h1 {
         font-size: 2em;
       }
       h2 {
         font-size: 1.5em;
-        border-bottom: 1px solid #ddd;
+        color: #2e64b5;
         padding-bottom: 5px;
       }
-      .education, .experience {
-        margin-bottom: 15px;
+      .education {
+        margin-bottom: 25px;
       }
-      .education p, .experience p {
+      .education p {
         margin: 5px 0;
         font-size: 1em;
       }
-      .education .degree, .experience .title {
-        font-weight: bold;
+      .experience-item {
+        text-align: left;
+        margin: 0 auto;
+        width: 80%;
+        margin-bottom: 20px;
+        padding-left: 25px;
+        position: relative;
       }
-      .education .duration, .experience .duration {
+      .experience-item:before {
+        content: counter(experience-counter);
+        counter-increment: experience-counter;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        width: 20px;
+        height: 20px;
+        background-color: #2e64b5;
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+      }
+      .experience-list {
+        counter-reset: experience-counter;
+        list-style-type: none;
+        padding: 0;
+      }
+      .title {
+        font-weight: bold;
+        font-size: 1.1em;
+      }
+      .company {
         font-style: italic;
+        color: #444;
+      }
+      .duration {
+        font-size: 0.9em;
         color: #666;
+        margin-top: 3px;
       }
       img {
         border-radius: 5px;
         margin-bottom: 15px;
+        max-width: 200px;
       }
       ul {
-        margin-top: 5px;
+        text-align: left;
+        width: 80%;
+        margin: 15px auto;
+      }
+      li {
+        margin-bottom: 8px;
       }
       footer {
-        margin-top: 20px;
-        text-align: center;
+        margin-top: 30px;
+      }
+      .linkedin {
+        margin-bottom: 25px;
+      }
+      a {
+        color: #2e64b5;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      hr {
+        border: 0;
+        height: 1px;
+        background-color: #ddd;
+        margin: 20px 0;
       }
     </style>
   </head>
@@ -60,36 +117,42 @@
     <img src="newimage/20190421_150944.jpg" alt="Sumanth's headshot" width="20%">
     <h1>Sumanth's Portal</h1>
    
-    <!-- don't post physical address, personal phone number or other personal information on the web! -->
+    <div class="linkedin">
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+    </div>
+
     <h2>Portfolio</h2>
      
     <h2>Education</h2>
     <div class="education">
-      <p class="institution">National Institute of Engineering, Mysore</p>
+      <p class="institution"><strong>National Institute of Engineering, Mysore</strong></p>
       <p class="degree">B.E. Information Science, CGPA 8.7</p>
     </div>
     
     <h2>Professional Experiences</h2>
-    <div class="experience">
-      <p class="title">Application Development Associate</p>
-      <p class="company">Accenture Solutions Private Limited, Bangalore</p>
-      <p class="duration">Nov 2020 - Nov 2021</p>
-    </div>
+    <ol class="experience-list">
+      <li class="experience-item">
+        <p class="title">Application Development Associate</p>
+        <p class="company">Accenture Solutions Private Limited, Bangalore</p>
+        <p class="duration">Nov 2020 - Nov 2021</p>
+      </li>
       
-    <div class="experience">
-      <p class="title">Web Development Intern</p>
-      <p class="company">Snipe IT Solutions, Mysore</p>
-      <p class="duration">March 2019</p>
-    </div>
+      <li class="experience-item">
+        <p class="title">Web Development Intern</p>
+        <p class="company">Snipe IT Solutions, Mysore</p>
+        <p class="duration">March 2019</p>
+      </li>
+    </ol>
     
     <h2>Skills and Projects</h2>
     <ul>
-      <li>Projects: Hotel Management System, Multitenancy using Cloud Computing, Bluemix to Azure: Cloud Migration of Java Applications, Zomato Restaurant Expansion Analysis</li>
-      <li>Tools and Languages: HTML, CSS, JAVA, SQL, Python, Excel, Power BI, Tableau</li>
+      <li><strong>Projects:</strong> Hotel Management System, Multitenancy using Cloud Computing, Bluemix to Azure: Cloud Migration of Java Applications, Zomato Restaurant Expansion Analysis</li>
+      <li><strong>Tools and Languages:</strong> HTML, CSS, JAVA, SQL, Python, Excel, Power BI, Tableau</li>
     </ul>   
+
+    <footer>
+      <hr>
+      <p><a href="index.html">Back to my portal</a></p>
+    </footer>
   </body>
-  <footer>
-    <hr>
-    <p><a href="index.html">Back to my portal</a></p>
-  </footer>
 </html>
