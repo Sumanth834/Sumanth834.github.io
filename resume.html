@@ -12,6 +12,38 @@
     <meta name="viewpoint" content="widht=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="name" content="Sumanth Raj's Portal">
     <meta name="robots" content="noindex, nofollow">
+    <style>
+      .button {
+        padding: 8px 16px;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 150px;
+        transition: all 0.3s ease;
+      }
+      
+      .hackerrank {
+        background-color: #2EC866;
+      }
+      
+      .leetcode {
+        background-color: #FFA116;
+      }
+      
+      .portal {
+        background-color: #4CAF50;
+      }
+      
+      .button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+      
+      .date {
+        font-weight: normal;
+      }
+    </style>
   </header>
 
   <body>
@@ -21,11 +53,11 @@
     
     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 10px;">
       <button onclick="window.location.href='https://www.hackerrank.com/profile/sumanthrajs98'" 
-              style="padding: 8px 16px; background-color: #2EC866; color: white; border: none; border-radius: 4px; cursor: pointer; width: 150px;">
+              class="button hackerrank">
         HackerRank
       </button>
       <button onclick="window.location.href='https://leetcode.com/u/SumanthRajS/'" 
-              style="padding: 8px 16px; background-color: #FFA116; color: white; border: none; border-radius: 4px; cursor: pointer; width: 150px;">
+              class="button leetcode">
         Leetcode
       </button>
     </div>
@@ -41,10 +73,10 @@
     <h2>Professional Experiences</h2>
     <div style="margin-left: 20px; font-size: 16px; line-height: 1.5;">
       <h3 style="margin-bottom: 5px; font-size: 18px;">Application development associate @ Accenture Solutions Private Limited, Bangalore</h3>
-      <h5 style="margin-top: 5px; font-size: 16px;">Nov 2020 - Nov 2021</h5>
+      <h5 style="margin-top: 5px; font-size: 16px;" class="date">Nov 2020 - Nov 2021</h5>
 
       <h3 style="margin-bottom: 5px; font-size: 18px;">Web development Intern @ Snipe IT Solutions, Mysore</h3>
-      <h5 style="margin-top: 5px; font-size: 16px;">March 2019</h5>
+      <h5 style="margin-top: 5px; font-size: 16px;" class="date">March 2019</h5>
     </div>
 
     <ul>
@@ -56,7 +88,7 @@
 
   <footer>
   <hr>
-  <button onclick="window.location.href='index.html'" style="padding: 8px 16px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">Back to my portal</button>
+  <button onclick="window.location.href='index.html'" class="button portal">Back to my portal</button>
   </footer>
 
 </html>
