@@ -1,59 +1,95 @@
 <!doctype html>
-
 <!-- this is a comment for human! -->
-
 <html lang="en">
-
-  <header>
+  <head>
     <title>Sumanth's Resume</title>
     <link rel="stylesheet" href="css/master.css">
     <link rel="FaviconIcon" href="download.png" type="image/x-icon">
     <link rel="shortcut" href="download.png" type="image/x-icon">
-    <meta name="viewpoint" content="widht=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="name" content="Sumanth Raj's Portal">
     <meta name="robots" content="noindex, nofollow">
-  </header>
-
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0 auto;
+        max-width: 800px;
+        padding: 20px;
+      }
+      h1, h2, h3, h4, h5 {
+        margin-bottom: 10px;
+      }
+      h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.5em;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 5px;
+      }
+      .education, .experience {
+        margin-bottom: 15px;
+      }
+      .education p, .experience p {
+        margin: 5px 0;
+        font-size: 1em;
+      }
+      .education .degree, .experience .title {
+        font-weight: bold;
+      }
+      .education .duration, .experience .duration {
+        font-style: italic;
+        color: #666;
+      }
+      img {
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
+      ul {
+        margin-top: 5px;
+      }
+      footer {
+        margin-top: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
   <body>
     <hr>
-
-    <img src="newimage/20190421_150944.jpg" alt="Sumanth's" headshot" width="20%">
-
-    <h1Sumanth's Portal</h1>
-
+    <img src="newimage/20190421_150944.jpg" alt="Sumanth's headshot" width="20%">
+    <h1>Sumanth's Portal</h1>
    
-    <p><a href="https://www.linkedin.com/in/sumanth-raj-s-35993b342/">Linkedin</a><p>
-    
     <!-- don't post physical address, personal phone number or other personal information on the web! -->
-
     <h2>Portfolio</h2>
      
-
     <h2>Education</h2>
-
-    <h3>National Institute of Engineering,Mysore</h3>
-    <h4>B.E. Information Science, CGPA 8.7</h4>
-
-    <h2>Professional Experiences</h2>
-    <h3>Application development associate @ Accenture Solutions Private Limited,Bangalore<h3>
-    <h5>Nov 2020 - Nov 2021<h5>
-      
-    <h3>Web development Intern @ Snipe IT Solutions,Mysore</h3>
-    <h5>March 2019</h5>
-      
-      <ul>
-        <li>Projects: Hotel management system,Multitenancy using cloud computing,Bluemix to Azure:cloud migration of Java applications,Zomato Restaurant Expansion Analysis</li>
-        <li>Tools and languages : HTML,CSS,JAVA,SQL,Python,Excel,Power BI,Tableau </li>
-      </ul>
-
+    <div class="education">
+      <p class="institution">National Institute of Engineering, Mysore</p>
+      <p class="degree">B.E. Information Science, CGPA 8.7</p>
+    </div>
     
-   
-   
+    <h2>Professional Experiences</h2>
+    <div class="experience">
+      <p class="title">Application Development Associate</p>
+      <p class="company">Accenture Solutions Private Limited, Bangalore</p>
+      <p class="duration">Nov 2020 - Nov 2021</p>
+    </div>
+      
+    <div class="experience">
+      <p class="title">Web Development Intern</p>
+      <p class="company">Snipe IT Solutions, Mysore</p>
+      <p class="duration">March 2019</p>
+    </div>
+    
+    <h2>Skills and Projects</h2>
+    <ul>
+      <li>Projects: Hotel Management System, Multitenancy using Cloud Computing, Bluemix to Azure: Cloud Migration of Java Applications, Zomato Restaurant Expansion Analysis</li>
+      <li>Tools and Languages: HTML, CSS, JAVA, SQL, Python, Excel, Power BI, Tableau</li>
+    </ul>   
   </body>
-
   <footer>
-  <hr>
-  <p><a href="index.html">Back to my portal</a><p>
+    <hr>
+    <p><a href="index.html">Back to my portal</a></p>
   </footer>
-
 </html>
