@@ -1,39 +1,170 @@
 <!doctype html>
-
 <!-- this is a comment for human! -->
-
 <html lang="en">
-
-  <header>
+  <head>
     <title>Sumanth Raj's Portal</title>
     <link rel="stylesheet" href="css/master.css">
     <link rel="FaviconIcon" href="download.png" type="image/x-icon">
     <link rel="shortcut" href="download.png" type="image/x-icon">
-    <meta name="viewpoint" content="widht=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="name" content="Sumanth's Portal">
     <meta name="robots" content="noindex, nofollow">
-  </header>
-
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        margin: 0 auto;
+        max-width: 800px;
+        padding: 20px;
+        background-color: #f9f8f0;
+        color: #333;
+      }
+      
+      .container {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        padding: 30px;
+        margin-top: 20px;
+      }
+      
+      .banner-container {
+        overflow: hidden;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        max-height: 250px;
+      }
+      
+      .banner-container img {
+        width: 100%;
+        object-fit: cover;
+      }
+      
+      h1 {
+        font-size: 2.2em;
+        color: #2e64b5;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #eaeaea;
+        padding-bottom: 10px;
+      }
+      
+      h2 {
+        font-size: 1.5em;
+        color: #2e64b5;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #eaeaea;
+      }
+      
+      p {
+        margin-bottom: 15px;
+        font-size: 1.05em;
+      }
+      
+      a {
+        color: #2e64b5;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      
+      a:hover {
+        color: #1a4c94;
+        text-decoration: underline;
+      }
+      
+      .quote {
+        font-style: italic;
+        color: #555;
+        border-left: 3px solid #2e64b5;
+        padding-left: 15px;
+        margin: 20px 0;
+      }
+      
+      .section {
+        margin-bottom: 30px;
+      }
+      
+      .links {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+      
+      .links a {
+        background-color: #eef5ff;
+        padding: 8px 15px;
+        border-radius: 4px;
+        display: inline-block;
+        transition: all 0.3s;
+      }
+      
+      .links a:hover {
+        background-color: #d0e3ff;
+        text-decoration: none;
+      }
+      
+      footer {
+        margin-top: 30px;
+        text-align: center;
+        font-size: 0.9em;
+        color: #777;
+      }
+      
+      hr {
+        border: 0;
+        height: 1px;
+        background-color: #ddd;
+        margin: 20px 0;
+      }
+      
+      @media (max-width: 600px) {
+        .container {
+          padding: 15px;
+        }
+        
+        h1 {
+          font-size: 1.8em;
+        }
+      }
+    </style>
+  </head>
   <body>
-    <img src="images/banner.jpg" width="80%" alt="banner">
-    <h1>Sumanth's Portal</h1>
-    <p>I’ve learned that nothing in life is worthwhile unless you take risks. Nothing!</p>
-    <h2>About me</h2>
-     <p>Pursued a Bachelor's degree in Information Science and Engineering from NIE, alongside gaining valuable experience in cloud migration of Java applications at Accenture</p>
-     <p>Passionate about building a career in Data Science and Analytics</p>
-     <h2>Credentials and Portfolio</h2>
-
-
-     <p><a href="resume.html">My Resume</a> | <a href="https://github.com/Sumanth834">My Github</a></p>
-     <h2>Contact</h2>
-
-     <p><a href="mailto:sumanthrajs98@gmail.com">My Email</a></p>
-     <p><a href="https://www.linkedin.com/in/sumanth-raj-s-35993b342/">My Linkedin</a><p>
+    <div class="container">
+      <div class="banner-container">
+        <img src="images/banner.jpg" alt="banner">
+      </div>
+      
+      <h1>Sumanth's Portal</h1>
+      
+      <p class="quote">I've learned that nothing in life is worthwhile unless you take risks. Nothing!</p>
+      
+      <div class="section">
+        <h2>About Me</h2>
+        <p>Pursued a Bachelor's degree in Information Science and Engineering from NIE, alongside gaining valuable experience in cloud migration of Java applications at Accenture.</p>
+        <p>Passionate about building a career in Data Science and Analytics.</p>
+      </div>
+      
+      <div class="section">
+        <h2>Credentials and Portfolio</h2>
+        <div class="links">
+          <a href="resume.html">My Resume</a>
+          <a href="https://github.com/Sumanth834">My GitHub</a>
+        </div>
+      </div>
+      
+      <div class="section">
+        <h2>Contact</h2>
+        <div class="links">
+          <a href="mailto:sumanthrajs98@gmail.com">My Email</a>
+          <a href="https://www.linkedin.com/in/sumanth-raj-s-35993b342/">My LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <hr>
+      <code>Copyright (c) 2025 Sumanth Raj S</code>
+    </footer>
   </body>
-
-  <footer>
-    <hr>
-    <code>Copyright (c) 2025 Sumanth Raj S</code>
-  </footer>
-
 </html>
