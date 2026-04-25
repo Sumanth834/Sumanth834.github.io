@@ -17,27 +17,35 @@ body {
   font-family: 'Poppins', sans-serif;
   background: #0f172a;
   color: white;
+  overflow-x: hidden;
+}
+
+/* 🌌 BACKGROUND GLOW */
+.bg-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 50%, rgba(56,189,248,0.15), transparent 40%);
+  transition: background 0.2s ease;
+  z-index: -1;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: 100px 20px;
 }
 
-/* PROFILE IMAGE */
-.profile {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 20px;
-  border: 3px solid #38bdf8;
+.hero h1 {
+  font-size: 2.8rem;
 }
 
 /* SOCIAL BUTTONS */
 .socials {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .socials a {
@@ -50,9 +58,26 @@ body {
   font-weight: 500;
 }
 
+/* COLORS */
 .hackerrank { background: #2EC866; }
 .leetcode { background: #FFA116; }
 .linkedin { background: #0A66C2; }
+
+/* BUTTON */
+.button {
+  padding: 10px 20px;
+  background: #22c55e;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+/* 🧲 MAGNETIC EFFECT */
+.magnetic {
+  transition: transform 0.2s ease;
+}
 
 /* SECTION */
 .section {
@@ -77,40 +102,29 @@ h2 {
   padding: 20px;
   border-radius: 10px;
 }
-
-/* BUTTON */
-.button {
-  padding: 10px 20px;
-  background: #22c55e;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  display: inline-block;
-  margin-top: 10px;
-}
 </style>
 </head>
 
 <body>
 
+<!-- 🌌 BACKGROUND -->
+<div class="bg-glow"></div>
+
 <!-- HERO -->
 <div class="hero">
-  
-  <!-- PROFILE IMAGE -->
-  <img src="profile.jpg" alt="Sumanth" class="profile">
 
   <h1>Hi, I'm Sumanth</h1>
   <p>Data & Strategy Analyst • SQL • Python • Power BI</p>
 
-  <!-- SOCIAL BUTTONS -->
+  <!-- SOCIALS -->
   <div class="socials">
-    <a href="https://www.hackerrank.com/profile/sumanthrajs98" class="hackerrank" target="_blank">HackerRank</a>
-    <a href="https://leetcode.com/u/SumanthRajS/" class="leetcode" target="_blank">LeetCode</a>
-    <a href="https://www.linkedin.com/in/sumanth-raj-s-35993b342/" class="linkedin" target="_blank">LinkedIn</a>
+    <a href="https://www.hackerrank.com/profile/sumanthrajs98" class="hackerrank magnetic" target="_blank">HackerRank</a>
+    <a href="https://leetcode.com/u/SumanthRajS/" class="leetcode magnetic" target="_blank">LeetCode</a>
+    <a href="https://www.linkedin.com/in/sumanth-raj-s-35993b342/" class="linkedin magnetic" target="_blank">LinkedIn</a>
   </div>
 
-  <br>
-  <a href="resume.html" class="button">View Resume</a>
+  <a href="resume.html" class="button magnetic">View Resume</a>
+
 </div>
 
 <!-- ABOUT -->
@@ -147,13 +161,37 @@ h2 {
 <!-- CONTACT -->
 <div class="section">
   <h2>Contact</h2>
-  <a href="mailto:sumanthrajs98@gmail.com" class="button">Email</a>
+  <a href="mailto:sumanthrajs98@gmail.com" class="button magnetic">Email</a>
 </div>
 
 <script>
+// 🌌 Background glow follows mouse
+document.addEventListener("mousemove", (e) => {
+  const x = e.clientX / window.innerWidth * 100;
+  const y = e.clientY / window.innerHeight * 100;
+
+  document.querySelector(".bg-glow").style.background =
+    `radial-gradient(circle at ${x}% ${y}%, rgba(56,189,248,0.2), transparent 40%)`;
+});
+
+// 🧲 Magnetic buttons
+document.querySelectorAll(".magnetic").forEach(btn => {
+  btn.addEventListener("mousemove", (e) => {
+    const rect = btn.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+
+    btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+  });
+
+  btn.addEventListener("mouseleave", () => {
+    btn.style.transform = "translate(0,0)";
+  });
+});
+
+// 🎬 GSAP animation
 gsap.registerPlugin(ScrollTrigger);
 
-// smooth section animation
 gsap.utils.toArray(".section").forEach(section => {
   gsap.from(section, {
     opacity: 0,
