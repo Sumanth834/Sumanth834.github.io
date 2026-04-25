@@ -39,8 +39,23 @@ body {
   padding: 100px 20px;
 }
 
-.hero h1 {
+/* 🔥 HERO TITLE ANIMATION */
+.hero-title {
   font-size: 2.8rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.line {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.highlight {
+  color: #38bdf8;
+  text-shadow: 0 0 10px rgba(56,189,248,0.7);
 }
 
 /* SOCIAL BUTTONS */
@@ -113,7 +128,13 @@ h2 {
 <!-- HERO -->
 <div class="hero">
 
-  <h1>Hi, I'm Sumanth</h1>
+  <!-- 🔥 Animated Title -->
+  <h1 class="hero-title">
+    <span class="line">Hi,</span>
+    <span class="line">I'm</span>
+    <span class="line highlight">Sumanth</span>
+  </h1>
+
   <p>Data & Strategy Analyst • SQL • Python • Power BI</p>
 
   <!-- SOCIALS -->
@@ -189,9 +210,19 @@ document.querySelectorAll(".magnetic").forEach(btn => {
   });
 });
 
-// 🎬 GSAP animation
+// 🎬 GSAP animations
 gsap.registerPlugin(ScrollTrigger);
 
+// hero text animation
+gsap.from(".line", {
+  opacity: 0,
+  y: 40,
+  duration: 0.8,
+  stagger: 0.3,
+  ease: "power3.out"
+});
+
+// section animations
 gsap.utils.toArray(".section").forEach(section => {
   gsap.from(section, {
     opacity: 0,
