@@ -16,76 +16,102 @@ body {
   color: white;
 }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 40px;
+/* HEADER (replaces image) */
+.header {
+  text-align: center;
+  padding: 50px 20px 20px;
 }
 
-h2 {
-  color: #38bdf8;
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
 }
 
-.section {
-  margin-bottom: 30px;
+.header p {
+  color: #cbd5f5;
+  margin-top: 8px;
 }
 
-img {
-  display: block;
-  margin: auto;
-  border-radius: 50%;
-  width: 150px;
-}
-
+/* BUTTON */
 .button {
   padding: 10px 20px;
   background: #22c55e;
   color: white;
   border-radius: 6px;
   text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
 }
 
-.center {
-  text-align: center;
+/* CONTAINER */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+h2 {
+  color: #38bdf8;
+  margin-top: 30px;
+}
+
+/* SECTION */
+.section {
+  margin-bottom: 30px;
+}
+
+/* LIST */
+ul {
+  line-height: 1.6;
 }
 </style>
 </head>
 
 <body>
 
-<img src="profile.jpg">
+<!-- HEADER -->
+<div class="header">
+  <h1>Sumanth Raj</h1>
+  <p>Data & Strategy Analyst • SQL • Python • Power BI</p>
 
-<div class="center">
-  <a href="index.html" class="button">Back</a>
+  <a href="index.html" class="button">Back to Portfolio</a>
 </div>
 
+<!-- CONTENT -->
 <div class="container">
 
 <div class="section">
 <h2>Summary</h2>
-<p>Data & Strategy Analyst working on SQL, Python and analytics.</p>
+<p>
+Data & Strategy Analyst with experience in SQL-driven analytics, Python automation, 
+and business insights. Currently working at Delhivery supporting profitability 
+and performance analysis.
+</p>
 </div>
 
 <div class="section">
 <h2>Experience</h2>
+
 <p><strong>Delhivery</strong></p>
 <ul>
-<li>SQL-driven analysis</li>
-<li>Python automation</li>
+<li>Performed SQL-driven profitability and performance analysis</li>
+<li>Automated reporting workflows using Python (Pandas)</li>
 </ul>
 
 <p><strong>Accenture</strong></p>
 <ul>
-<li>Cloud migration</li>
+<li>Worked on cloud migration and backend systems</li>
+<li>Handled enterprise-level application workflows</li>
 </ul>
+
 </div>
 
 <div class="section">
 <h2>Projects</h2>
 <ul>
-<li>Bank CRM Analysis</li>
-<li>Chinook SQL</li>
-<li>Zomato Analysis</li>
+<li><strong>Bank CRM Analysis</strong> — Customer insights using SQL & Power BI</li>
+<li><strong>Chinook SQL</strong> — Multi-table data analysis</li>
+<li><strong>Zomato Analysis</strong> — Market expansion insights</li>
 </ul>
 </div>
 
