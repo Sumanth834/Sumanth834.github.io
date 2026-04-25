@@ -2,182 +2,165 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Sumanth Raj | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Sumanth Raj | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #0f172a, #020617);
-      color: white;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: white;
+}
 
-    .navbar {
-      position: sticky;
-      top: 0;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 15px;
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(10px);
-    }
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+}
 
-    .navbar a {
-      color: white;
-      text-decoration: none;
-    }
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+}
 
-    .hero {
-      text-align: center;
-      padding: 120px 20px;
-    }
+/* GLASS */
+.glass {
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  padding: 30px;
+  margin: 20px;
+  backdrop-filter: blur(10px);
+}
 
-    .hero h1 {
-      font-size: 3rem;
-    }
+/* BUTTON */
+.button {
+  padding: 12px 25px;
+  background: #22c55e;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+}
 
-    .glass {
-      background: rgba(255,255,255,0.05);
-      border-radius: 15px;
-      padding: 30px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-      margin: 20px;
-    }
+/* PROJECTS */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
 
-    .button {
-      padding: 12px 25px;
-      background: #22c55e;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      display: inline-block;
-      margin: 10px;
-    }
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
 
-    .section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 60px 20px;
-    }
+.card:hover {
+  transform: translateY(-10px);
+}
 
-    h2 {
-      color: #38bdf8;
-    }
+/* BIRD */
+#bird {
+  position: fixed;
+  top: 100px;
+  left: -100px;
+  font-size: 40px;
+  animation: fly 6s linear forwards;
+}
 
-    /* PROJECT CARDS */
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+@keyframes fly {
+  0% { left: -100px; }
+  100% { left: 110%; }
+}
 
-    .card {
-      background: rgba(255,255,255,0.05);
-      padding: 20px;
-      border-radius: 12px;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #020617;
-      color: gray;
-    }
-  </style>
+#drop {
+  position: fixed;
+  top: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 1s;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <div class="navbar">
-    <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
+<!-- BIRD -->
+<div id="bird">🕊️</div>
 
-  <!-- HERO -->
-  <div class="hero">
-    <h1>Hi, I'm Sumanth 👋</h1>
-    <p id="typing"></p>
+<!-- DROPPED BUTTON -->
+<div id="drop">
+  <a href="resume.html" class="button">View Resume</a>
+</div>
 
-    <a href="resume.html" class="button">View Resume</a>
-  </div>
+<!-- NAV -->
+<div class="navbar">
+  <a href="#">Home</a>
+  <a href="#projects">Projects</a>
+</div>
 
-  <!-- ABOUT -->
-  <div class="section">
-    <div class="glass">
-      <h2>About Me</h2>
-      <p>
-        Data & Strategy Analyst at Delhivery specializing in SQL, Python, and analytics.
-        I work on profitability analysis, automation, and business decision support.
-      </p>
+<!-- HERO -->
+<div class="hero">
+  <h1>Hi, I'm Sumanth 👋</h1>
+  <p id="typing"></p>
+</div>
+
+<!-- ABOUT -->
+<div class="glass">
+  <h2>About Me</h2>
+  <p>Data & Strategy Analyst at Delhivery working on SQL, Python and analytics.</p>
+</div>
+
+<!-- PROJECTS -->
+<div class="glass" id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="card">
+      <h3>Bank CRM Analysis</h3>
+      <p>10,000+ users analyzed</p>
+    </div>
+    <div class="card">
+      <h3>Chinook SQL</h3>
+      <p>Advanced SQL insights</p>
+    </div>
+    <div class="card">
+      <h3>Zomato Analysis</h3>
+      <p>Market expansion insights</p>
     </div>
   </div>
+</div>
 
-  <!-- PROJECTS -->
-  <div class="section" id="projects">
-    <h2>Projects</h2>
+<!-- CONTACT -->
+<div class="glass">
+  <h2>Contact</h2>
+  <a href="mailto:sumanthrajs98@gmail.com" class="button">Email</a>
+</div>
 
-    <div class="projects">
+<!-- SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+new Typed("#typing", {
+  strings: ["Data Analyst", "SQL • Python • Power BI"],
+  typeSpeed: 50,
+  loop: true
+});
 
-      <div class="card">
-        <h3>Bank CRM Analysis</h3>
-        <p>Analyzed 10,000+ users using SQL & Power BI.</p>
-      </div>
-
-      <div class="card">
-        <h3>Chinook SQL</h3>
-        <p>Worked across 11+ tables for insights.</p>
-      </div>
-
-      <div class="card">
-        <h3>Zomato Expansion</h3>
-        <p>Market analysis across 15+ countries.</p>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- CONTACT -->
-  <div class="section" id="contact">
-    <div class="glass">
-      <h2>Contact</h2>
-      <a href="mailto:sumanthrajs98@gmail.com" class="button">Email</a>
-      <a href="https://github.com/Sumanth834" class="button" target="_blank">GitHub</a>
-    </div>
-  </div>
-
-  <footer>
-    © 2025 Sumanth Raj S
-  </footer>
-
-  <!-- Typing -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script>
-    new Typed("#typing", {
-      strings: [
-        "Data & Strategy Analyst",
-        "SQL • Python • Power BI",
-        "I turn data into decisions"
-      ],
-      typeSpeed: 50,
-      loop: true
-    });
-  </script>
+setTimeout(() => {
+  document.getElementById("drop").style.opacity = 1;
+}, 3000);
+</script>
 
 </body>
-
 </html>
