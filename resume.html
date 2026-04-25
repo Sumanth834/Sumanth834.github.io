@@ -1,94 +1,98 @@
 <!doctype html>
-
-<!-- this is a comment for human! -->
-
 <html lang="en">
 
-  <header>
-    <title>Sumanth's Resume</title>
-    <link rel="stylesheet" href="css/master.css">
-    <link rel="FaviconIcon" href="download.png" type="image/x-icon">
-    <link rel="shortcut" href="download.png" type="image/x-icon">
-    <meta name="viewpoint" content="widht=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="name" content="Sumanth Raj's Portal">
-    <meta name="robots" content="noindex, nofollow">
-    <style>
-      .button {
-        padding: 8px 16px;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        width: 150px;
-        transition: all 0.3s ease;
-      }
-      
-      .hackerrank {
-        background-color: #2EC866;
-      }
-      
-      .leetcode {
-        background-color: #FFA116;
-      }
-      
-      .portal {
-        background-color: #4CAF50;
-      }
-      
-      .button:hover {
-        transform: scale(1.05);
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      }
-      
-      .date {
-        font-weight: normal;
-      }
-    </style>
-  </header>
+<head>
+  <meta charset="UTF-8">
+  <title>Sumanth Raj | Resume</title>
 
-  <body>
-    <hr>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <img src="newimage/20190421_150944.jpg" alt="Sumanth's headshot" width="20%">
-    
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 10px;">
-      <button onclick="window.location.href='https://www.hackerrank.com/profile/sumanthrajs98'" 
-              class="button hackerrank">
-        HackerRank
-      </button>
-      <button onclick="window.location.href='https://leetcode.com/u/SumanthRajS/'" 
-              class="button leetcode">
-        Leetcode
-      </button>
-    </div>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 
-    <!-- don't post physical address, personal phone number or other personal information on the web! -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0f172a;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+      text-align: left;
+    }
+
+    img {
+      border-radius: 50%;
+      margin-top: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hackerrank { background: #2EC866; }
+    .leetcode { background: #FFA116; }
+    .back { background: #4CAF50; }
+
+    h2 {
+      color: #38bdf8;
+    }
+  </style>
+</head>
+
+<body>
+
+  <img src="newimage/20190421_150944.jpg" width="150">
+
+  <div>
+    <a href="https://www.hackerrank.com/profile/sumanthrajs98" class="button hackerrank">HackerRank</a>
+    <a href="https://leetcode.com/u/SumanthRajS/" class="button leetcode">LeetCode</a>
+  </div>
+
+  <div class="container">
+
+    <h2>Professional Summary</h2>
+    <p>Data & Strategy Analyst with experience in SQL, Python, and analytics.</p>
 
     <h2>Education</h2>
-    <div style="margin-left: 20px; font-size: 16px; line-height: 1.5;">
-      <h3 style="margin-bottom: 5px; font-size: 18px;">National Institute of Engineering, Mysore</h3>
-      <h4 style="margin-top: 5px; font-size: 16px;">B.E. Information Science, CGPA 8.7</h4>
-    </div>
+    <p><strong>NIE Mysore</strong> — B.E. Information Science (8.7 CGPA)</p>
 
-    <h2>Professional Experiences</h2>
-    <div style="margin-left: 20px; font-size: 16px; line-height: 1.5;">
-      <h3 style="margin-bottom: 5px; font-size: 18px;">Application development associate @ Accenture Solutions Private Limited, Bangalore</h3>
-      <h5 style="margin-top: 5px; font-size: 16px;" class="date">Nov 2020 - Nov 2021</h5>
-
-      <h3 style="margin-bottom: 5px; font-size: 18px;">Web development Intern @ Snipe IT Solutions, Mysore</h3>
-      <h5 style="margin-top: 5px; font-size: 16px;" class="date">March 2019</h5>
-    </div>
-
+    <h2>Experience</h2>
+    <p><strong>Delhivery</strong></p>
     <ul>
-      <li>Projects: Hotel management system, Multitenancy using cloud computing, Bluemix to Azure cloud migration of Java applications, Zomato restaurant expansion analysis ,Bank CRM Customer Analysis ,Chinook Music Store Analysis</li>
-      <li>Tools and languages: Java, HTML, CSS, Python, SQL, Excel, Tableau, Power BI</li>
+      <li>SQL analysis and reporting</li>
+      <li>Automation using Python</li>
     </ul>
 
-  </body>
+    <p><strong>Accenture</strong></p>
+    <ul>
+      <li>Cloud migration projects</li>
+    </ul>
 
-  <footer>
-  <hr>
-  <button onclick="window.location.href='index.html'" class="button portal">Back to my portal</button>
-  </footer>
+    <h2>Projects</h2>
+    <ul>
+      <li>Bank CRM Analysis</li>
+      <li>Chinook SQL</li>
+      <li>Zomato Analysis</li>
+    </ul>
+
+    <h2>Skills</h2>
+    <p>SQL • Python • Power BI • Excel</p>
+
+  </div>
+
+  <a href="index.html" class="button back">Back</a>
+
+</body>
 
 </html>
