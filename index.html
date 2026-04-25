@@ -19,22 +19,40 @@ body {
   color: white;
 }
 
-/* NAV */
-.nav {
-  padding: 15px;
-  text-align: center;
-  background: rgba(255,255,255,0.05);
-}
-
 /* HERO */
 .hero {
   text-align: center;
-  padding: 100px 20px;
+  padding: 80px 20px;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
+/* PROFILE IMAGE */
+.profile {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #38bdf8;
 }
+
+/* SOCIAL BUTTONS */
+.socials {
+  margin-top: 15px;
+}
+
+.socials a {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.hackerrank { background: #2EC866; }
+.leetcode { background: #FFA116; }
+.linkedin { background: #0A66C2; }
 
 /* SECTION */
 .section {
@@ -47,7 +65,7 @@ h2 {
   color: #38bdf8;
 }
 
-/* PROJECT CARDS */
+/* PROJECT GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
@@ -67,18 +85,30 @@ h2 {
   color: white;
   text-decoration: none;
   border-radius: 6px;
+  display: inline-block;
+  margin-top: 10px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="nav">Sumanth Raj</div>
-
 <!-- HERO -->
 <div class="hero">
+  
+  <!-- PROFILE IMAGE -->
+  <img src="profile.jpg" alt="Sumanth" class="profile">
+
   <h1>Hi, I'm Sumanth</h1>
   <p>Data & Strategy Analyst • SQL • Python • Power BI</p>
+
+  <!-- SOCIAL BUTTONS -->
+  <div class="socials">
+    <a href="https://www.hackerrank.com/profile/sumanthrajs98" class="hackerrank" target="_blank">HackerRank</a>
+    <a href="https://leetcode.com/u/SumanthRajS/" class="leetcode" target="_blank">LeetCode</a>
+    <a href="https://www.linkedin.com/in/sumanth-raj-s-35993b342/" class="linkedin" target="_blank">LinkedIn</a>
+  </div>
+
   <br>
   <a href="resume.html" class="button">View Resume</a>
 </div>
@@ -87,8 +117,8 @@ h2 {
 <div class="section">
   <h2>About</h2>
   <p>
-    Working at Delhivery on SQL-driven analytics and profitability insights.
-    Previously at Accenture handling cloud migration projects.
+    Data & Strategy Analyst at Delhivery working on SQL-driven analytics and profitability insights.
+    Previously at Accenture handling cloud migration and backend systems.
   </p>
 </div>
 
@@ -98,18 +128,18 @@ h2 {
 
   <div class="grid">
     <div class="card">
-      <h3>Bank CRM</h3>
-      <p>10,000+ users analyzed</p>
+      <h3>Bank CRM Analysis</h3>
+      <p>Analyzed 10,000+ users using SQL & Power BI.</p>
     </div>
 
     <div class="card">
       <h3>Chinook SQL</h3>
-      <p>Advanced queries & insights</p>
+      <p>Worked across 11+ tables for insights.</p>
     </div>
 
     <div class="card">
-      <h3>Zomato Analysis</h3>
-      <p>Market expansion insights</p>
+      <h3>Zomato Expansion</h3>
+      <p>Market analysis across 15+ countries.</p>
     </div>
   </div>
 </div>
@@ -123,7 +153,7 @@ h2 {
 <script>
 gsap.registerPlugin(ScrollTrigger);
 
-// animate sections smoothly
+// smooth section animation
 gsap.utils.toArray(".section").forEach(section => {
   gsap.from(section, {
     opacity: 0,
