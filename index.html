@@ -1,58 +1,218 @@
 <!doctype html>
- 
-<!-- this is a comment for human! -->
- 
 <html lang="en">
 
-  <header>
-    <title>Sumanth Raj's Portal</title>
-    <link rel="stylesheet" href="css/master.css">
-    <link rel="FaviconIcon" href="download.png" type="image/x-icon">
-    <link rel="shortcut" href="download.png" type="image/x-icon">
-    <meta name="viewpoint" content="widht=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="name" content="Sumanth's Portal">
-    <meta name="robots" content="noindex, nofollow">
-    <style>
-      .button {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #4CAF50;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        margin: 5px;
-        font-weight: bold;
-      }
-      
-      .button:hover {
-        background-color: #45a049;
-      }
-    </style>
-  </header>
+<head>
+  <meta charset="UTF-8">
+  <title>Sumanth Raj | Portfolio</title>
 
-  <body>
-    <img src="images/banner.jpg" width="80%" alt="banner">
-    <h1>Sumanth's Portal</h1>
-    <p>Ease is a greater threat to progress than hardship!</p>
-    <h2>About me</h2>
-     <p>Pursued a Bachelor's degree in Information Science and Engineering from NIE, alongside gaining valuable experience in cloud migration of Java applications at Accenture</p>
-     <p>Passionate about building a career in Data Science and Analytics</p>
-     <h2>Credentials and Portfolio</h2>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Sumanth Raj">
 
-     <p>
-       <a href="resume.html" class="button">My Resume</a> 
-       <a href="https://github.com/Sumanth834" class="button">My Github</a>
-     </p>
-     <h2>Contact</h2>
+  <!-- Google Analytics (Replace YOUR_ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5M7GV6HGZV');
+  </script>
 
-     <p><a href="mailto:sumanthrajs98@gmail.com" class="button">My Email</a></p>
-     <p><a href="https://www.linkedin.com/in/sumanth-raj-s-35993b342/" class="button">My Linkedin</a></p>
-    
-  </body>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0f172a;
+      color: white;
+      scroll-behavior: smooth;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: rgba(2,6,23,0.9);
+      backdrop-filter: blur(10px);
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .navbar a:hover {
+      color: #38bdf8;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #cbd5f5;
+    }
+
+    /* BUTTON */
+    .button {
+      display: inline-block;
+      padding: 12px 25px;
+      margin: 10px;
+      background: #22c55e;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background: #16a34a;
+      transform: scale(1.05);
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 80px 20px;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      color: #38bdf8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+      color: gray;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Hi, I'm Sumanth 👋</h1>
+    <p id="typing"></p>
+
+    <a href="#projects" class="button">View Projects</a>
+    <a href="resume.pdf" class="button">Download Resume</a>
+
+    <br><br>
+    <!-- Visitor Counter -->
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=Sumanth834.portfolio" />
+  </div>
+
+  <!-- ABOUT -->
+  <div class="section" id="about">
+    <h2>About Me</h2>
+    <p>
+      Information Science graduate from NIE with experience in cloud migration of Java applications at Accenture.
+      Passionate about Data Science, Analytics, and building scalable solutions.
+    </p>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section" id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li>Bank CRM Analysis — Customer insights using SQL & Power BI</li>
+      <li>Zomato Expansion Analysis — Market growth insights</li>
+      <li>Cloud Migration — Bluemix to Azure for Java apps</li>
+    </ul>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="section" id="contact">
+    <h2>Contact</h2>
+
+    <a href="mailto:sumanthrajs98@gmail.com" class="button">Email</a>
+    <a href="https://github.com/Sumanth834" class="button" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/sumanth-raj-s-35993b342/" class="button" target="_blank">LinkedIn</a>
+  </div>
 
   <footer>
-    <hr>
-    <code>Copyright (c) 2025 Sumanth Raj S</code>
+    © 2025 Sumanth Raj S
   </footer>
+
+  <!-- Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    window.onload = () => {
+      confetti({
+        particleCount: 120,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    };
+  </script>
+
+  <!-- Typing Effect -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    var typed = new Typed("#typing", {
+      strings: [
+        "I build scalable web applications",
+        "I work with data & analytics",
+        "I solve real-world problems"
+      ],
+      typeSpeed: 50,
+      backSpeed: 25,
+      loop: true
+    });
+  </script>
+
+  <!-- Scroll Animation -->
+  <script>
+    const sections = document.querySelectorAll('.section');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+
+</body>
 
 </html>
