@@ -39,18 +39,10 @@ body {
   padding: 100px 20px;
 }
 
-/* 🔥 HERO TITLE ANIMATION */
+/* FIXED HERO TITLE */
 .hero-title {
   font-size: 2.8rem;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.line {
-  opacity: 0;
-  transform: translateY(40px);
+  opacity: 1; /* always visible */
 }
 
 .highlight {
@@ -128,11 +120,8 @@ h2 {
 <!-- HERO -->
 <div class="hero">
 
-  <!-- 🔥 Animated Title -->
   <h1 class="hero-title">
-    <span class="line">Hi,</span>
-    <span class="line">I'm</span>
-    <span class="line highlight">Sumanth</span>
+    Hi, I'm <span class="highlight">Sumanth</span>
   </h1>
 
   <p>Data & Strategy Analyst • SQL • Python • Power BI</p>
@@ -213,12 +202,11 @@ document.querySelectorAll(".magnetic").forEach(btn => {
 // 🎬 GSAP animations
 gsap.registerPlugin(ScrollTrigger);
 
-// hero text animation
-gsap.from(".line", {
+// safe hero animation
+gsap.from(".hero-title", {
   opacity: 0,
   y: 40,
-  duration: 0.8,
-  stagger: 0.3,
+  duration: 1,
   ease: "power3.out"
 });
 
