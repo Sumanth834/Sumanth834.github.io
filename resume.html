@@ -3,8 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Sumanth Raj | Resume</title>
-
+  <title>Resume | Sumanth</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
@@ -15,83 +14,87 @@
       font-family: 'Poppins', sans-serif;
       background: #0f172a;
       color: white;
-      text-align: center;
     }
 
     .container {
       max-width: 900px;
       margin: auto;
       padding: 40px 20px;
-      text-align: left;
     }
 
-    img {
-      border-radius: 50%;
-      margin-top: 20px;
+    .glass {
+      background: rgba(255,255,255,0.05);
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #38bdf8;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-bottom: 20px;
     }
 
     .button {
-      display: inline-block;
       padding: 10px 20px;
-      margin: 5px;
-      border-radius: 5px;
-      color: white;
+      border-radius: 6px;
       text-decoration: none;
-      font-weight: bold;
+      color: white;
+      margin: 5px;
+      display: inline-block;
     }
 
     .hackerrank { background: #2EC866; }
     .leetcode { background: #FFA116; }
     .back { background: #4CAF50; }
-
-    h2 {
-      color: #38bdf8;
-    }
   </style>
 </head>
 
 <body>
 
-  <img src="newimage/20190421_150944.jpg" width="150">
-
-  <div>
+  <div class="buttons">
     <a href="https://www.hackerrank.com/profile/sumanthrajs98" class="button hackerrank">HackerRank</a>
     <a href="https://leetcode.com/u/SumanthRajS/" class="button leetcode">LeetCode</a>
   </div>
 
   <div class="container">
 
-    <h2>Professional Summary</h2>
-    <p>Data & Strategy Analyst with experience in SQL, Python, and analytics.</p>
+    <div class="glass">
+      <h2>Summary</h2>
+      <p>Data & Strategy Analyst with SQL, Python, and analytics experience.</p>
+    </div>
 
-    <h2>Education</h2>
-    <p><strong>NIE Mysore</strong> — B.E. Information Science (8.7 CGPA)</p>
+    <div class="glass">
+      <h2>Experience</h2>
+      <p><strong>Delhivery</strong></p>
+      <ul>
+        <li>SQL-driven analysis</li>
+        <li>Python automation</li>
+      </ul>
 
-    <h2>Experience</h2>
-    <p><strong>Delhivery</strong></p>
-    <ul>
-      <li>SQL analysis and reporting</li>
-      <li>Automation using Python</li>
-    </ul>
+      <p><strong>Accenture</strong></p>
+      <ul>
+        <li>Cloud migration projects</li>
+      </ul>
+    </div>
 
-    <p><strong>Accenture</strong></p>
-    <ul>
-      <li>Cloud migration projects</li>
-    </ul>
-
-    <h2>Projects</h2>
-    <ul>
-      <li>Bank CRM Analysis</li>
-      <li>Chinook SQL</li>
-      <li>Zomato Analysis</li>
-    </ul>
-
-    <h2>Skills</h2>
-    <p>SQL • Python • Power BI • Excel</p>
+    <div class="glass">
+      <h2>Projects</h2>
+      <ul>
+        <li>Bank CRM Analysis</li>
+        <li>Chinook SQL</li>
+        <li>Zomato Analysis</li>
+      </ul>
+    </div>
 
   </div>
 
-  <a href="index.html" class="button back">Back</a>
+  <div style="text-align:center;">
+    <a href="index.html" class="button back">Back</a>
+  </div>
 
 </body>
 
