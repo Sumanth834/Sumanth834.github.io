@@ -8,13 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio of Sumanth Raj">
 
-  <!-- Google Analytics (Replace YOUR_ID) -->
+  <!-- Google Analytics (OPTIONAL - replace YOUR_ID or remove) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_ID"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-5M7GV6HGZV');
+    gtag('config', 'YOUR_ID');
   </script>
 
   <!-- Fonts -->
@@ -29,7 +29,6 @@
       scroll-behavior: smooth;
     }
 
-    /* NAVBAR */
     .navbar {
       position: sticky;
       top: 0;
@@ -52,7 +51,6 @@
       color: #38bdf8;
     }
 
-    /* HERO */
     .hero {
       text-align: center;
       padding: 100px 20px;
@@ -61,7 +59,6 @@
 
     .hero h1 {
       font-size: 3rem;
-      margin-bottom: 10px;
     }
 
     .hero p {
@@ -69,7 +66,6 @@
       color: #cbd5f5;
     }
 
-    /* BUTTON */
     .button {
       display: inline-block;
       padding: 12px 25px;
@@ -87,7 +83,6 @@
       transform: scale(1.05);
     }
 
-    /* SECTIONS */
     .section {
       padding: 80px 20px;
       max-width: 900px;
@@ -122,6 +117,7 @@
   <div class="navbar">
     <a href="#">Home</a>
     <a href="#about">About</a>
+    <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </div>
@@ -131,11 +127,10 @@
     <h1>Hi, I'm Sumanth 👋</h1>
     <p id="typing"></p>
 
-    <a href="#projects" class="button">View Projects</a>
-    <a href="resume.pdf" class="button">Download Resume</a>
+    <a href="resume.pdf" class="button" download>Download Resume</a>
+    <a href="resume.html" class="button">View Resume</a>
 
     <br><br>
-    <!-- Visitor Counter -->
     <img src="https://visitor-badge.laobi.icu/badge?page_id=Sumanth834.portfolio" />
   </div>
 
@@ -143,25 +138,58 @@
   <div class="section" id="about">
     <h2>About Me</h2>
     <p>
-      Information Science graduate from NIE with experience in cloud migration of Java applications at Accenture.
-      Passionate about Data Science, Analytics, and building scalable solutions.
+      Data & Strategy Analyst with experience in cloud migration and logistics analytics.
+      Currently working at Delhivery, leveraging SQL and Python (Pandas) for profitability
+      analysis and strategic insights.
     </p>
+    <p>
+      Previously worked at Accenture, contributing to large-scale cloud migration and
+      database integration projects.
+    </p>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="section" id="experience">
+    <h2>Experience</h2>
+
+    <p><strong>Delhivery — Associate Strategy</strong><br>
+    Oct 2025 – Present</p>
+    <ul>
+      <li>Performed SQL-driven profitability analysis to identify cost drivers</li>
+      <li>Automated reporting workflows using Python (Pandas)</li>
+      <li>Supported strategic decision-making with data insights</li>
+    </ul>
+
+    <p><strong>Accenture — Application Development Associate</strong><br>
+    Nov 2020 – Nov 2021</p>
+    <ul>
+      <li>Migrated 15+ Java applications from Bluemix to Azure</li>
+      <li>Worked on database integration and Kafka pipelines</li>
+    </ul>
   </div>
 
   <!-- PROJECTS -->
   <div class="section" id="projects">
     <h2>Projects</h2>
     <ul>
-      <li>Bank CRM Analysis — Customer insights using SQL & Power BI</li>
-      <li>Zomato Expansion Analysis — Market growth insights</li>
-      <li>Cloud Migration — Bluemix to Azure for Java apps</li>
+      <li><strong>Bank CRM Analysis</strong> — Analyzed 10,000+ users using SQL & Power BI</li>
+      <li><strong>Chinook Music Store</strong> — SQL analysis across 11+ tables</li>
+      <li><strong>Zomato Expansion</strong> — Market analysis across 15+ countries</li>
     </ul>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section">
+    <h2>Skills</h2>
+    <p>
+      SQL • Python • Power BI • Excel • Pandas • MySQL<br>
+      Data Analytics • Profitability Analysis • Reporting Automation
+    </p>
   </div>
 
   <!-- CONTACT -->
   <div class="section" id="contact">
     <h2>Contact</h2>
-
     <a href="mailto:sumanthrajs98@gmail.com" class="button">Email</a>
     <a href="https://github.com/Sumanth834" class="button" target="_blank">GitHub</a>
     <a href="https://www.linkedin.com/in/sumanth-raj-s-35993b342/" class="button" target="_blank">LinkedIn</a>
@@ -188,9 +216,9 @@
   <script>
     var typed = new Typed("#typing", {
       strings: [
-        "I build scalable web applications",
-        "I work with data & analytics",
-        "I solve real-world problems"
+        "Data & Strategy Analyst",
+        "I analyze data to drive decisions",
+        "SQL • Python • Power BI"
       ],
       typeSpeed: 50,
       backSpeed: 25,
@@ -214,5 +242,4 @@
   </script>
 
 </body>
-
 </html>
